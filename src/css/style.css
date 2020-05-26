@@ -1,5 +1,14 @@
 /*! purgecss start ignore */
 @tailwind base;
+
+.app-store-badge {
+  display: inline-block;
+  overflow: hidden;
+  width: 135px;
+  height: 40px;
+  background: url(https://linkmaker.itunes.apple.com/en-us/badge-lrg.svg?releaseDate=2011-12-08&kind=iossoftware&bubble=ios_apps) no-repeat;
+}
+
 @tailwind components;
 /*! purgecss end ignore */
 @tailwind utilities;
