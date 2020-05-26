@@ -14,10 +14,10 @@ function HomePage() {
 
       <section className="">
         <div className="flex flex-wrap">
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/2 mb-4">
             <img alt="Chart" className="block" src={chartIllustration}/>
           </div>
-          <div className="w-full md:w-1/2 pl-6">
+          <div className="w-full md:w-1/2 md:pl-6">
     <p className="mb-4"><b>Jyotish Computer</b> is a fully featured Vedic Astrology software for iPhone and iPad.
     The list of features include:
     </p>
