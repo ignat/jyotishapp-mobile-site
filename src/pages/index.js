@@ -35,7 +35,7 @@ function HomePage() {
     </ul>
 
     <div className="text-center">
-      <a href="https://apps.apple.com/us/app/jyotish-vedic-astrology-computer/id485847194?mt=8" className="app-store-badge"></a>
+      <a href="https://apps.apple.com/us/app/jyotish-computer/id485847193?mt=8" className="app-store-badge"></a>
     </div>
           </div>
         </div>
