@@ -20,7 +20,7 @@ function HomePage() {
   <div className="w-full md:w-1/2">
     <h1 className="text-5xl font-bold tracking-tight leading-tight">Vedic Astrology for Everyone</h1>
     <div className="my-4 text-gray-800 text-lg">
-      Jyotish Computer is easy to use. Analyze events or see current transits. Only important information.
+      Jyotish Computer is easy to use. Analyze events or see current transits. Keep database of your events and places.
     </div>
     <div className="my-8">
       <a href="https://apps.apple.com/us/app/jyotish-computer/id485847193?mt=8" className="app-store-badge"></a>
