@@ -36,7 +36,7 @@ function HomePage() {
   <div className="w-full mt-4 mb-8 text-gray-800 text-lg">
     Written in SwiftUI. Takes advantage of the latest Apple framework. Works on iPhone and iPad.
   </div>
-  <div className="w-full md:w-1/2 text-left">
+  <div className="w-full md:w-1/2 text-left mb-8">
     <div className="mb-4 flex">
       <div>
         <DarkIcon size={24} className="mr-5 mt-2" />
@@ -75,7 +75,7 @@ function HomePage() {
   <div className="w-full mt-4 mb-8 text-gray-800 text-lg">
     Jyotish Computer comes with lots of features. And we keep adding more.
   </div>
-  <div className="w-full md:w-1/2 text-center">
+  <div className="w-full md:w-1/2 text-center mb-8">
     <img alt="App Icon" width="300" height="300" className="block m-auto rounded-lg shadow-lg" src={chartStyles}/>
   </div>
   <div className="w-full md:w-1/2 text-left">
