@@ -9,6 +9,8 @@
   background: url(https://linkmaker.itunes.apple.com/en-us/badge-lrg.svg?releaseDate=2011-12-08&kind=iossoftware&bubble=ios_apps) no-repeat;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
 @tailwind components;
 /*! purgecss end ignore */
 @tailwind utilities;

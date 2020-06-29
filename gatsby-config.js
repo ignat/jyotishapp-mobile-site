@@ -6,7 +6,7 @@ const fullConfig = resolveConfig(tailwindConfig);
 module.exports = {
   siteMetadata: {
     title: `Jyotish Computer`,
-    description: `Jyotish Computer - Vedic Astrology for Pros`,
+    description: `Jyotish Computer - Vedic Astrology for Everyone`,
     author: `@ignat`,
   },
   plugins: [
@@ -21,7 +21,7 @@ module.exports = {
         background_color: fullConfig.theme.colors.white,
         theme_color: fullConfig.theme.colors.blue["400"],
         display: `minimal-ui`,
-        icon: `src/images/tailwind-icon.png`,
+        icon: `src/images/jyotishapp-icon.png`,
       },
     },
     {
