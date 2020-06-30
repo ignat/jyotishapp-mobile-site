@@ -17,7 +17,7 @@ function HomePage() {
       />
 
 <section className="flex flex-wrap mt-8 mb-32">
-  <div className="w-full md:w-1/2">
+  <div className="w-full md:w-1/2 text-center md:text-left">
     <h1 className="text-5xl font-bold tracking-tight leading-tight">Vedic Astrology for Everyone</h1>
     <div className="my-4 text-gray-800 text-lg">
       Jyotish Computer is easy to use. Analyze events or see current transits. Keep database of your events and places.
