@@ -9,6 +9,7 @@
     "gatsby-plugin-offline": "3.2.7",
     "gatsby-plugin-postcss": "2.3.2",
     "gatsby-plugin-react-helmet": "3.3.2",
+    "gatsby-plugin-google-tagmanager": "4.4.0",
     "gatsby-plugin-sharp": "2.6.9",
     "prop-types": "15.7.2",
     "react": "16.13.1",
