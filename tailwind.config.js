@@ -1,6 +1,6 @@
 // See https://tailwindcss.com/docs/configuration for details
 module.exports = {
-  purge: [
+  content: [
     './src/**/*.js',
   ],
   theme: {
