@@ -30,18 +30,7 @@ module.exports = {
         id: "GTM-NFQC9TN",
       },
     },
-    {
-      resolve: `gatsby-plugin-postcss`,
-      options: {
-        postCssPlugins: [
-          require(`tailwindcss`)(tailwindConfig),
-          require(`autoprefixer`),
-          ...(process.env.NODE_ENV === `production`
-            ? [require(`cssnano`)]
-            : []),
-        ],
-      },
-    },
+    `gatsby-plugin-postcss`,
     `gatsby-plugin-offline`,
   ],
 };
