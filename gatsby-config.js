@@ -8,6 +8,7 @@ module.exports = {
     title: `Jyotish Computer`,
     description: `Jyotish Computer - Vedic Astrology for Everyone`,
     author: `@ignat`,
+    keywords: [`jyotish`, `vedic`, `astrology`, `ios`, `iphone`, `ipad`, `apple`, `mobile`, `jyotishapp`],
   },
   plugins: [
     `gatsby-plugin-eslint`,

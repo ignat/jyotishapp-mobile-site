@@ -11,12 +11,14 @@ function SEO({ description, lang, meta, keywords, title }) {
           title
           description
           author
+          keywords
         }
       }
     }
   `);
 
   const metaDescription = description || site.siteMetadata.description;
+  const metaKeywords = site.siteMetadata.keywords.concat(keywords);
 
   return (
     <Helmet
@@ -31,8 +33,8 @@ function SEO({ description, lang, meta, keywords, title }) {
         { name: `twitter:title`, content: `${title} | ${site.siteMetadata.title}` },
         { name: `twitter:description`, content: metaDescription },
       ].concat(
-        keywords.length > 0
-          ? { name: `keywords`, content: keywords.join(`, `) } : []
+        metaKeywords.length > 0
+          ? { name: `keywords`, content: metaKeywords.join(`, `) } : []
       ).concat(meta)}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
