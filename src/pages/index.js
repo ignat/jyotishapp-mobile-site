@@ -23,7 +23,9 @@ function HomePage() {
       Jyotish Computer is easy to use. Analyze events or see current transits. Keep database of your events and places.
     </div>
     <div className="my-8">
-      <a href="https://apps.apple.com/us/app/jyotish-computer/id485847193?mt=8" className="app-store-badge"></a>
+      <a href="https://apps.apple.com/us/app/jyotish-computer/id485847193?itsct=apps_box_badge&amp;itscg=30200" className="app-store-badge">
+        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1323302400&h=4f35d8e34d8a95f60554d019a8815734" alt="Download on the App Store" />
+      </a>
     </div>
   </div>
   <div className="w-full md:w-1/2 text-center">
