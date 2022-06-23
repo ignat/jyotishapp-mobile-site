@@ -6,10 +6,7 @@ import SEO from "../components/seo";
 function SupportPage() {
   return (
     <Layout>
-      <SEO
-        keywords={[`jyotish`, `vedic`, `astrology`, `ios`, `support`, `mobile`, `jyotishapp`]}
-        title="Support"
-      />
+      <SEO title="Support" keywords={[`support`]} />
 
       <section>
         <h1 className="text-4xl font-bold my-4">Support</h1>

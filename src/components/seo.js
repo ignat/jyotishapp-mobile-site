@@ -1,7 +1,7 @@
 import { useStaticQuery, graphql } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 function SEO({ description, lang, meta, keywords, title }) {
   const { site } = useStaticQuery(graphql`
@@ -11,61 +11,31 @@ function SEO({ description, lang, meta, keywords, title }) {
           title
           description
           author
+          keywords
         }
       }
     }
   `);
 
   const metaDescription = description || site.siteMetadata.description;
+  const metaKeywords = site.siteMetadata.keywords.concat(keywords);
 
   return (
     <Helmet
-      htmlAttributes={{
-        lang,
-      }}
+      htmlAttributes={{ lang, }}
       meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ]
-        .concat(
-          keywords.length > 0
-            ? {
-                name: `keywords`,
-                content: keywords.join(`, `),
-              }
-            : []
-        )
-        .concat(meta)}
+        { name: `description`, content: metaDescription },
+        { property: `og:title`, content: `${title} | ${site.siteMetadata.title}` },
+        { property: `og:description`, content: metaDescription },
+        { property: `og:type`, content: `website` },
+        { name: `twitter:card`, content: `summary` },
+        { name: `twitter:creator`, content: site.siteMetadata.author },
+        { name: `twitter:title`, content: `${title} | ${site.siteMetadata.title}` },
+        { name: `twitter:description`, content: metaDescription },
+      ].concat(
+        metaKeywords.length > 0
+          ? { name: `keywords`, content: metaKeywords.join(`, `) } : []
+      ).concat(meta)}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
     />

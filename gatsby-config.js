@@ -8,10 +8,11 @@ module.exports = {
     title: `Jyotish Computer`,
     description: `Jyotish Computer - Vedic Astrology for Everyone`,
     author: `@ignat`,
+    keywords: [`jyotish`, `vedic`, `astrology`, `ios`, `iphone`, `ipad`, `apple`, `mobile`, `jyotishapp`],
   },
   plugins: [
     `gatsby-plugin-eslint`,
-    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-react-helmet-async`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -25,17 +26,12 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-postcss`,
+      resolve: "gatsby-plugin-google-tagmanager",
       options: {
-        postCssPlugins: [
-          require(`tailwindcss`)(tailwindConfig),
-          require(`autoprefixer`),
-          ...(process.env.NODE_ENV === `production`
-            ? [require(`cssnano`)]
-            : []),
-        ],
+        id: "GTM-NFQC9TN",
       },
     },
+    `gatsby-plugin-postcss`,
     `gatsby-plugin-offline`,
   ],
 };
