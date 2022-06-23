@@ -20,52 +20,20 @@ function SEO({ description, lang, meta, keywords, title }) {
 
   return (
     <Helmet
-      htmlAttributes={{
-        lang,
-      }}
+      htmlAttributes={{ lang, }}
       meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ]
-        .concat(
-          keywords.length > 0
-            ? {
-                name: `keywords`,
-                content: keywords.join(`, `),
-              }
-            : []
-        )
-        .concat(meta)}
+        { name: `description`, content: metaDescription },
+        { property: `og:title`, content: title },
+        { property: `og:description`, content: metaDescription },
+        { property: `og:type`, content: `website` },
+        { name: `twitter:card`, content: `summary` },
+        { name: `twitter:creator`, content: site.siteMetadata.author },
+        { name: `twitter:title`, content: title },
+        { name: `twitter:description`, content: metaDescription },
+      ].concat(
+        keywords.length > 0
+          ? { name: `keywords`, content: keywords.join(`, `) } : []
+      ).concat(meta)}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
     />

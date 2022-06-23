@@ -11,9 +11,8 @@ import { Copy as DoubleIcon, Moon as DarkIcon, Shield as ShieldIcon, Eye as EyeI
 function HomePage() {
   return (
     <Layout>
-      <SEO
-        keywords={[`jyotish`, `vedic`, `astrology`, `ios`, `home`, `mobile`, `jyotishapp`]}
-        title="Home"
+      <SEO title="Home"
+        keywords={[`jyotish`, `vedic`, `astrology`, `ios`, `iphone`, `ipad`, `apple`, `home`, `mobile`, `jyotishapp`]}
       />
 
 <section className="flex flex-wrap mt-8 mb-32">

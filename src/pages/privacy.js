@@ -6,9 +6,8 @@ import SEO from "../components/seo";
 function PrivacyPage() {
   return (
     <Layout>
-      <SEO
-        keywords={[`jyotish`, `vedic`, `astrology`, `ios`, `privacy`, `policy`, `mobile`, `jyotishapp`]}
-        title="Privacy Policy"
+      <SEO title="Privacy Policy"
+        keywords={[`jyotish`, `vedic`, `astrology`, `ios`, `iphone`, `ipad`, `apple`, `privacy`, `policy`, `mobile`, `jyotishapp`]}
       />
 
       <section>
