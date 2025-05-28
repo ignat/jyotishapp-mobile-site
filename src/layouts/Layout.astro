@@ -1,0 +1,135 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+  title: string;
+  description?: string;
+  keywords?: string[];
+}
+
+const { title, description = "Jyotish Computer - Vedic Astrology for Everyone", keywords = [] } = Astro.props;
+
+const siteTitle = "Jyotish Computer";
+const defaultKeywords = ["jyotish", "vedic", "astrology", "ios", "iphone", "ipad", "apple", "mobile", "jyotishapp"];
+const allKeywords = [...defaultKeywords, ...keywords];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/jyotishapp-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <title>{title} | {siteTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={allKeywords.join(", ")} />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content={`${title} | ${siteTitle}`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:creator" content="@ignat" />
+    <meta name="twitter:title" content={`${title} | ${siteTitle}`} />
+    <meta name="twitter:description" content={description} />
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NFQC9TN');</script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+  </head>
+  <body class="flex flex-col min-h-screen font-sans text-gray-900">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFQC9TN"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
+    <header class="bg-blue-700">
+      <div class="flex flex-wrap items-center justify-between max-w-4xl p-4 mx-auto md:p-8">
+        <a href="/">
+          <h1 class="flex items-center text-white no-underline">
+            <span class="text-xl font-bold tracking-tight">
+              {siteTitle}
+            </span>
+          </h1>
+        </a>
+
+        <button
+          class="flex items-center px-3 py-2 text-white border border-white rounded md:hidden"
+          id="mobile-menu-toggle"
+        >
+          <svg
+            class="w-3 h-3 fill-current"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+          </svg>
+        </button>
+
+        <nav
+          class="hidden md:flex md:items-center w-full md:w-auto"
+          id="mobile-menu"
+        >
+          <a
+            class="block mt-4 text-white no-underline md:inline-block md:mt-0 md:ml-6"
+            href="/support"
+          >
+            Support
+          </a>
+          <a
+            class="block mt-4 text-white no-underline md:inline-block md:mt-0 md:ml-6"
+            href="/privacy"
+          >
+            Privacy
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="flex-1 w-full max-w-4xl px-4 py-8 mx-auto md:px-8 md:py-16">
+      <slot />
+    </main>
+
+    <footer class="bg-blue-700">
+      <nav class="flex justify-between max-w-4xl p-4 mx-auto text-sm md:p-8">
+        <p class="text-white">
+          &copy; 2025 Ignat Skoryh
+        </p>
+
+        <p>
+          <a
+            class="font-bold text-white no-underline"
+            href="https://github.com/ignat/jyotishapp-mobile-site"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+        </p>
+      </nav>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const toggle = document.getElementById('mobile-menu-toggle');
+      const menu = document.getElementById('mobile-menu');
+      
+      toggle?.addEventListener('click', () => {
+        menu?.classList.toggle('hidden');
+        menu?.classList.toggle('block');
+      });
+    </script>
+  </body>
+</html>

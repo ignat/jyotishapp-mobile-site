@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@theme {
+    --color-blue-600: #3182ce;
+    --color-blue-700: #2b6cb0;
+    --font-sans: Inter, system-ui, Roboto, "Helvetica Neue", Arial, sans-serif
+}
