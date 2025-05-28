@@ -57,7 +57,7 @@ const allKeywords = [...defaultKeywords, ...keywords];
     
     <header class="bg-blue-700">
       <div class="flex flex-wrap items-center justify-between max-w-4xl p-4 mx-auto md:p-8">
-        <a href="/">
+        <a href="/" data-astro-prefetch="load">
           <h1 class="flex items-center text-white no-underline">
             <span class="text-xl font-bold tracking-tight">
               {siteTitle}
@@ -85,12 +85,14 @@ const allKeywords = [...defaultKeywords, ...keywords];
         >
           <a
             class="block mt-4 text-white no-underline md:inline-block md:mt-0 md:ml-6"
+            data-astro-prefetch="load"
             href="/support"
           >
             Support
           </a>
           <a
             class="block mt-4 text-white no-underline md:inline-block md:mt-0 md:ml-6"
+            data-astro-prefetch="load"
             href="/privacy"
           >
             Privacy
